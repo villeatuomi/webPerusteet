@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 3 - Hemoglobiiniarvio</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy sukupuolen ja hemoglobiiniarvon ja ilmoittaa onko hemoglobiiniarvo alhainen, normaali vai korkea.</h1>
+    <script>
+        'use strict';
+        let sukupuoli = prompt('Oletko mies (m) vai nainen (n)?');
+        let arvo = prompt('Anna hemoglobiiniarvosi (g/l)');
+        
+        if (sukupuoli == 'm') {
+          if (arvo < 134) {
+            alert('Hemoglobiiniarvosi on alhainen.');
+          } else if (arvo > 195) {
+            alert('Hemoglobiiniarvosi on korkea.');
+          } else {
+            alert('Hemoglobiiniarvosi on normaali.');
+          };
+        }else if (sukupuoli == 'n') {
+          if (arvo < 117) {
+            alert('Hemoglobiiniarvosi on alhainen.');
+          } else if (arvo > 175) {
+            alert('Hemoglobiiniarvosi on korkea');
+          } else {
+            alert('Hemoglobiiniarvosi on normaali');
+          };
+        } else {
+          alert('Error');
+        };
+
+    </script>
+</body>
+</html>

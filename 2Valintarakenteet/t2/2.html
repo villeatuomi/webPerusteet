@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 2 - Lajitteluhattu</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy nimeä ja kertoo mihin tupaan kuulut.</h1>
+    <script>
+        'use strict';
+        let numero = Math.round(3 * Math.random()) + 1;
+        alert(numero);
+        let nimi = prompt('Anna nimesi');
+        switch (numero) {
+          case 1:
+            alert(nimi + ', olet Rohkelikko');
+            break;
+          case 2:
+            alert(nimi + ', olet Luihuinen');
+            break;
+          case 3:
+            alert(nimi + ', olet Puuskupuh');
+            break;
+          case 4:
+            alert(nimi + ', olet Korpinkynsi');
+            break;
+          default:
+            alert('Error');
+        }
+
+    </script>
+</body>
+</html>

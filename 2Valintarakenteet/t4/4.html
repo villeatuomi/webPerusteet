@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 4 - Bussilipun osto</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy lompakossa olevaa rahamäärää ja bussilipun hintaa.</h1>
+    <script>
+        'use strict';
+        let saldo = +prompt('Anna lompakossasi olevan rahamäärän suuruus');
+        let hinta = +prompt('Anna bussilipun hinta');
+        if (saldo >= hinta) {
+          saldo -= hinta;
+          alert('Hyvää matkaa!\nRahamäärä lompakossasi: ' + saldo);
+        } else {
+          alert('Rahamäärä lompakossasi: ' + saldo);
+        };
+
+        // kesken ongelmaa laskuissa
+    </script>
+</body>
+</html>

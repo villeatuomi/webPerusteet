@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 5 - Lasketaanko neliöjuuri?</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy lasketaanko neliöjuuri ja laskee sen, jos painetaan 'OK'.</h1>
+    <script>
+        'use strict';
+        let lasketaanko = window.confirm('Lasketaanko neliöjuuri?');
+        if (lasketaanko) {
+          let luku = +prompt('Anna luku');
+          if (luku >= 0) {
+            let arvo = Math.sqrt(luku);
+            alert('Antamasi luvun neliöjuuri on ' + arvo);
+          } else {
+            alert('Negatiivisen luvun neliöjuuri ei ole määritelty')
+          };
+        } else {
+          alert('Neliöjuurta ei lasketa.');
+        };
+    </script>
+</body>
+</html>

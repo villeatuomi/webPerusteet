@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 1 - Kuhan pituus</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy kuhan pituutta ja ilmoittaa onko se alamittainen</h1>
+    <script>
+        'use strict';
+        let pituus = prompt('Syötä kuhan pituus senttimetreinä');
+        if (pituus < 37){
+            let erotus = 37 - pituus;
+            alert('Laske kuha takaisin järveen! Kuha on ' + erotus + ' cm liian lyhyt.');
+        }
+    </script>
+</body>
+</html>
