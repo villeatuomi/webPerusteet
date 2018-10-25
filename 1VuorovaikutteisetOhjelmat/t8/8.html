@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 8 - Monopolinopat ja niiden summa</title>
+</head>
+<body>
+    <h1>Ohjelma arpoo kaksi nopan arvoa ja tulostaa ne ja niiden summan.</h1>
+    <script>
+        'use strict';
+        let noppa1 = Math.random();
+        noppa1 = 5 * noppa1;
+        noppa1 = noppa1 + 1;
+        noppa1 = noppa1.toFixed(0);
+
+        let noppa2 = Math.random();
+        noppa2 = 5 * noppa2;
+        noppa2 = noppa2 + 1;
+        noppa2 = noppa2.toFixed(0);
+
+        let summa = +noppa1 + +noppa2;
+        alert('Ensimmäisen nopan luku on ' + noppa1 + ' ja toisen nopan luku on ' + noppa2 + '. \nSumma on ' + summa);
+    </script>
+</body>
+</html>

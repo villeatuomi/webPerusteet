@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 7 - Saldo ja korko</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy saldon ja vuotuisen korkoprosentin.
+        Ohjelma ilmoittaa vuodessa kertyvän koron määrän sekä kasvaneen saldon, johon on lisätty vuosikorko.</h1>
+    <script>
+        'use strict';
+        let saldo = +prompt('Anna tilin saldo');
+        let korkoprosentti = +prompt('Anna vuotuinen vuosikorko');
+        korkoprosentti /= 100;
+        let koronMaara = saldo * korkoprosentti;
+        saldo += koronMaara;
+        alert('Vuodessa kertyvän koron määrä: ' + koronMaara + ' Uusi saldo: ' + saldo);
+
+
+
+    </script>
+</body>
+</html>

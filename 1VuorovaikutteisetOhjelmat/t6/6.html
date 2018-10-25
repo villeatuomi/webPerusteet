@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 6 - Keskiaikaiset mitat</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy massan leivisköinä, nauloina ja luoteina. Ohjelma laskee ja tulostaa massan kilogrammoina ja grammoina erikseen.</h1>
+    <script>
+        'use strict';
+        let leiviska = +prompt('Anna paino leivisköinä');
+        let naula = +prompt('Anna paino nauloina');
+        let luoti = +prompt('Anna paino luoteina');
+        naula = naula + (20 * leiviska);
+        luoti = luoti + (32 * naula);
+        let gramma = 13.3 * luoti;
+        let kilo = gramma / 1000;
+        let kiloina = Math.floor(kilo);
+        let grammoina = kilo - kiloina;
+        grammoina = 1000 * grammoina;
+        grammoina = grammoina.toFixed(2);
+        alert('Massa nykymittojen mukaan: ' + kiloina + ' kilogrammaa ja ' + grammoina + ' grammaa.');
+        // Tämän voisi kyllä kirjoittaa lyhyemmin
+    </script>
+</body>
+</html>

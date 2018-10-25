@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 4 - Suorakulmion piiri ja pinta-ala</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy suorakulmion kantaa ja korkeutta. Ohjelma laskee ja tulostaa annetun kokoisen suorakulmion piirin ja pinta-alan.</h1>
+    <script>
+        'use strict';
+        let kanta = prompt('Anna suorakulmion kanta');
+        let korkeus = prompt('Anna suorakulmion korkeus');
+
+        // Miten voisi tehdä niin, piiri laskettaisiin ensin summaamalla kanta ja korkeus ja sitten kertomalla
+        // summa 2:lla. Sulkeet aiheuttavat ongelmaa. Tapahtuu katenointia.
+
+        let piiri = 2 * kanta + 2 * korkeus;
+        let pintaAla = kanta * korkeus;
+        alert('Suorakulmion piiri on ' + piiri + ' ja pinta-ala on ' + pintaAla);
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 5 - Kolme lukua ja summa, tulo ja keskiarvo</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy kolmea (3) lukua ja laskee ja tulostaa niiden summan, tulon ja keskiarvon</h1>
+    <script>
+        'use strict';
+        let luku1 = parseFloat(prompt('Anna Ensimmäinen luku'));
+        let luku2 = parseFloat(prompt('Anna toinen luku'));
+        let luku3 = parseFloat(prompt('Anna kolmas luku'));
+        let summa = luku1 + luku2 + luku3;
+        let tulo = luku1 * luku2 * luku3;
+        let keskiarvo = summa / 3;
+        alert('Kolmen annetun luvun summa on ' + summa + ', tulo on ' + tulo + ' ja keskiarvo on ' + keskiarvo);
+    </script>
+</body>
+</html>
