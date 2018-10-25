@@ -13,8 +13,10 @@
         let korkoprosentti = +prompt('Anna vuotuinen vuosikorko');
         korkoprosentti /= 100;
         let koronMaara = saldo * korkoprosentti;
+        let koronMaarafix = koronMaara.toFixed(2);
         saldo += koronMaara;
-        alert('Vuodessa kertyvän koron määrä: ' + koronMaara + ' Uusi saldo: ' + saldo);
+        let saldofix = saldo.toFixed(2);
+        alert('Vuodessa kertyvän koron määrä: ' + koronMaarafix + ' Uusi saldo: ' + saldofix);
 
 
 
