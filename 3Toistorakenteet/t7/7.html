@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 7 - Bingokortin luominen</title>
+</head>
+<body>
+    <h1>Ohjelma arpoo bingokortin 25 numeroa</h1>
+    <script>
+        'use strict';
+        let numero;
+        for (let i = 1; i <=25; i++) {
+          let luku = Math.floor(Math.random() * Math.floor(4));
+
+          if (luku == 0) {
+            numero = 4 * i - 3;
+          } else if (luku == 1) {
+            numero = 4 * i - 2;
+          } else if (luku = 2) {
+            numero = 4 * i - 1;
+          } else {
+            numero = 4 * i;
+          };
+          document.write('<p>' + numero + '</p>');
+
+        };
+
+
+    </script>
+</body>
+</html>

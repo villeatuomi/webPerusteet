@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 4 - Monta arpakuutiota</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy arpakuutioiden määrää ja ilmoittaa niiden summan.</h1>
+    <script>
+        'use strict';
+        let nopat = +prompt('Anna arpakuutioiden lukumäärä.');
+        let summa = 0;
+        let noppa = 0;
+        while (nopat % 1 != 0 || nopat <= 0) {
+          nopat = +prompt('Arpakuutioiden lukumäärän pitää olla positiivinen kokonaisluku. \nSyötä arpakuutioiden lukumäärä uudestaan.');
+        };
+        for (let i = 1; i <= nopat; i++) {
+          noppa = Math.random();
+          noppa = 5 * noppa;
+          noppa = noppa + 1;
+          noppa = +noppa.toFixed(0);
+          summa = summa + noppa;
+        };
+
+        alert('Heitettiin noppaa ' + nopat + ' krt ja summaksi saatiin ' + summa);
+    </script>
+</body>
+</html>

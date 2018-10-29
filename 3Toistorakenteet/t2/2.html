@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 2 - Neliöjuuri</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy lukua, josta se laskee neliöjuuren. Luvun pitää olla posittivinen.</h1>
+    <script>
+        'use strict';
+        let luku = prompt('Anna positiivinen luku, josta lasketaan neliöjuuri.');
+        while (luku < 0) {
+          luku = prompt('Antamasi luku ei ole positiivinen. Anna uusi luku.');
+        };
+        let juuri = Math.sqrt(luku);
+        alert('Antamasi luvun neliöjuuri on: ' + juuri);
+    </script>
+</body>
+</html>

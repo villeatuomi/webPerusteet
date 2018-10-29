@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 1 - Kokonaisluvun kertoma</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy kokonaislukua ja laskee ja tulostaa sen kertoman</h1>
+    <script>
+        'use strict';
+        let kertoma =1;
+        let luku = +prompt('Anna luku');
+        while (luku % 1 != 0 || luku < 0) {
+          luku = +prompt('Antamasi luku ei ole kokonaisluku tai positiivinen');
+        };
+        if (luku == 0 || luku == 1) {
+          kertoma = 1;
+        } else {
+          while (luku > 0) {
+            kertoma = kertoma * luku;
+            luku--;
+          };
+        };
+        alert('Kertoma on ' + kertoma);
+    </script>
+</body>
+</html>

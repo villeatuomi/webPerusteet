@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 6 - Summan todennäköisyys nopilla</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy heitettävien noppien lukumäärää ja toivottua noppien summaa. Ohjelma laskee tämän summan todennäköisyyden.</h1>
+    <script>
+        'use strict';
+        let nopat = +prompt('Anna heitettävien noppien lukumäärä.');
+
+        while (nopat % 1 != 0 || nopat < 1) {
+          nopat = +prompt('Antamasi noppien lukumäärä ei ole positiivinen kokonaisluku. Anna uusi luku.');
+        };
+
+        let toivottu = +prompt('Syötä toivomasi noppien silmälukujen summa.');
+
+        while (toivottu % 1 != 0 || toivottu < 1) {
+          toivottu = +prompt('Syöttämäsi luku ei ole positiivinen kokonaisluku. Syötä uusi luku.');
+        };
+        let toistot = 10000;
+        let summa;
+        let kertyy = 0;
+
+        for (let i = 1; i <= toistot; i++) {
+          summa = 0;
+          for (let j = 1; j <= nopat; j++) {
+            let noppa = +Math.random();
+            noppa *= 6;
+            noppa += 0.5;
+            noppa = Math.round(noppa);
+            summa += noppa;
+
+          };
+
+          if (+summa == +toivottu) {
+            kertyy += 1;
+          };
+        };
+        alert('Osumia kertyi: ' + kertyy);
+        let todnak = kertyy / toistot;
+        alert('Todennäköisyys on ' + todnak);
+        //alert(noppa);
+        //alert(typeof noppa);
+
+        //vaikea, ei toimi, Miksi ei toimi?
+
+    </script>
+</body>
+</html>

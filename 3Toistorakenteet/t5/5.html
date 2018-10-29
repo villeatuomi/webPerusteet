@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 5 - Alkuluku</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy luvun ja on tarkistaa onko se alkuluku.</h1>
+    <script>
+        'use strict';
+        let luku = +prompt('Anna luku.');
+        let tark = 1;
+        while (luku % 1 != 0 || luku <= 0) {
+          luku = +prompt('Antamasi luku ei ole positiivinen kokonaisluku. Anna uusi luku.');
+        };
+        alert(luku);
+        for (let i = 1; i <= luku; i++) {
+          if (luku % i == 0) {
+             tark = tark * i;
+          };
+        };
+        if (tark != luku) {
+          alert('Luku ei ole alkuluku');
+        } else {
+          alert('Luku on alkuluku');
+        };
+    </script>
+</body>
+</html>
