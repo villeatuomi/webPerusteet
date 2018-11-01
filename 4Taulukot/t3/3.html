@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 3 - Kuuden koiran nimet</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy kuuden (6) koiran nimet</h1>
+    <script>
+        'use strict';
+
+        let koirat = [];
+
+        for (let i = 0; i < 6; i++) {
+          koirat[i] = prompt('Anna koiran nimi');
+        };
+
+        koirat.sort();
+        koirat.reverse();
+
+        document.write('<ul>');
+
+        for (let j = 0; j < 6; j++) {
+          document.write('<li>' + koirat[j] + '</li>');
+        };
+
+        document.write('</ul>');
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 7 - Vaalikone</title>
+</head>
+<body>
+    <h1>Ohjelma</h1>
+    <script>
+        'use strict';
+        let suurin;
+        let ehdokkaat = +prompt('Anna ehdokkaiden lukumäärä.');
+        let db = [];
+        for (let i = 1; i <= ehdokkaat; i++) {
+          db[i] = 0;
+        };
+
+        let voters = +prompt('Anna äänestäjien lukumäärä.');
+
+        for (let j = 1; j <= voters; j++) {
+          let aani = prompt('Äänestäjä nro ' + j + ', anna äänesi.');
+
+          if (aani == 0 || aani > ehdokkaat || aani < 0) {
+
+          } else {
+            db[aani] += 1;
+          };
+        };
+
+        alert(db);
+        suurin = 1;
+        for (let k = 2; k <= db.length; k++) {
+          if (db[k] > db[suurin]) {
+            suurin = k;
+          };
+        };
+
+        alert('Voittaja on: ' + suurin);
+
+    </script>
+</body>
+</html>

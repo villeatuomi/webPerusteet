@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 6 - Annettujen lukujen mediaani</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy lukuja ja laskee lopuksi niiden mediaanin. Lukujen syöttämisen voi lopettamalla syöttämällä 0.</h1>
+    <script>
+        'use strict';
+        let annetut = [];
+        let luku;
+        let mediaani;
+
+        do {
+          luku = +prompt('Anna luku.');
+          annetut.push(luku);
+        } while (luku != 0);
+        annetut.pop();
+        annetut.sort(function(a,b) {
+          return a-b;
+        });
+        
+        if (annetut.length % 2 === 0) {
+          mediaani = ( annetut[annetut.length / 2] + annetut[annetut.length / 2 -1] ) / 2;
+        } else {
+          mediaani = annetut[Math.floor(annetut.length / 2)];
+        };
+        
+        alert('pituus on: ' + annetut.length);
+        alert('Tässä syötetyt luvut: ' + annetut);
+        alert('Mediaani annetuille luvuille on: ' + mediaani);
+    </script>
+</body>
+</html>

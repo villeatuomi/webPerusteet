@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 5 - Numeroita nollasta tuhanteen</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy lukuja nollasta tuhanteen ja lopettaa, jos sama luku annetaan.</h1>
+    <script>
+        'use strict';
+        let annetut = [];
+        let luku;
+
+        
+        for (let i = 0; i < 1000; i++) {
+          
+          luku = prompt('Anna luku väliltä 1 - 1000.');
+          while (luku < 1 || luku > 1000 || luku % 1 != 0) {
+            luku = prompt('Antamasi luku ei ole kokonaisluku väliltä 1 - 1000. Anna uusi luku.');
+          };
+          if (annetut.includes(luku)) {
+            alert('Olet jo aikaisemmin syöttänyt tuon luvun. Ohjelma loppuu.');
+            break;
+          } else {
+            annetut.push(luku);
+          };
+        };
+
+
+
+        
+
+
+
+
+        alert('loppu');
+
+
+    </script>
+</body>
+</html>

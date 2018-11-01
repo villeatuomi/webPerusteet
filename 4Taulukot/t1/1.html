@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 1 - 5 lukua käänteisessä järjestyksessä</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy viittä lukua ja tulostaa ne vastakkaisessa järjestyksessä.</h1>
+    <script>
+        'use strict';
+        let luvut = [];
+        for (let i = 0; i < 5; i++) {
+          luvut[i] = +prompt('Anna luku');
+        };
+        for (let j = 4; j >= 0; j--) {
+          document.write('<p>' + luvut[j] + '</p>');
+        };
+    </script>
+</body>
+</html>
