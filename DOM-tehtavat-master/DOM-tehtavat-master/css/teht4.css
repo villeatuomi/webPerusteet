@@ -1,0 +1,7 @@
+ul {
+    list-style-type: none;
+}
+
+li:nth-child(even){
+    background-color: gray;
+}
