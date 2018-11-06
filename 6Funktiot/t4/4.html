@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 4 - Suurin luku</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy kolmea (3) lukua ja ilmoittaa niistä suurimman.</h1>
+    <script>
+        'use strict';
+
+        const kolmeLukua = (a,b,c) => {
+          const suurin = Math.max(a,b,c);
+          return suurin;
+        }
+
+        let luku = [];
+
+        for (let i = 1; i <= 3; i++){
+         luku[i] = +prompt('Anna ' + i + '. luku');
+        };
+
+        alert('Suurin luku on: ' + kolmeLukua(luku[1],luku[2],luku[3]));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 8 - Fibonacci funktiona</title>
+</head>
+<body>
+    <h1>Ohjelma laskee fibonaccin lukujonon jäsenen.</h1>
+    <script>
+        'use strict';
+
+        function fibonacci(mones) {
+          if (mones === 1 || mones === 2)
+            return 1;
+          else
+            return fibonacci(mones-1) + fibonacci(mones-2);
+        }
+
+        const luku = +prompt('Monennenko luvun haluat fibonaccin lukujonossa?');
+        alert(luku + '. luku fibonaccin lukujonossa on: ' + fibonacci(luku));
+
+    </script>
+</body>
+</html>

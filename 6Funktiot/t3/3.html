@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 3 - Itseisarvo</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy lukua ja laskee ja tulostaa sen itseisarvon.</h1>
+    <script>
+        'use strict';
+        const itseisarvo = (luku) => {
+          const arvo = Math.abs(luku);
+          return arvo;
+        }
+
+        const numero = +prompt('Anna luku, mistä lasketaan itseisarvo.');
+
+        alert('Antamasi luvun itseisarvo on: ' + itseisarvo(numero));
+
+    </script>
+</body>
+</html>

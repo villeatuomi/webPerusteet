@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 7 - Parilliset luvut</title>
+</head>
+<body>
+    <h1>Ohjelma palauttaa parilliset luvut taulusta</h1>
+    <script>
+        'use strict';
+        const parilliseksi = (taulukko) => {
+          let parilliset = [];
+          let juokseva = 0;
+          for (let i = 0; i < taulukko.length; i++) {
+            if (taulukko[i] % 2 === 0) {
+              parilliset[juokseva] = taulukko[i];
+              juokseva++;
+            };
+          };
+          return parilliset;
+        }
+
+        let luvut = [];
+        let lkm = +prompt('Anna annettavien lukujen lukumäärä.');
+        for (let j = 0; j < lkm; j++) {
+            luvut[j] = +prompt('Syötä luku');
+        };
+
+        alert('Parillisia ovat: ' + parilliseksi(luvut));
+    </script>
+</body>
+</html>

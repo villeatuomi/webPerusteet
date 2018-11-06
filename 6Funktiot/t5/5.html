@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 5 - Liittää yhteen</title>
+</head>
+<body>
+    <h1>Ohjelma liittää yhteen merkkijonoja taulukosta</h1>
+    <script>
+        'use strict';
+
+        const liita = (taulukko) => {
+          let merkkijono = '';
+          for (let i = 0; i < taulukko.length; i++) {
+            merkkijono += taulukko[i];
+          };
+          return merkkijono;
+        }
+
+        let nimiTaulu = [];
+        let lkm = +prompt('Anna liitettävien merkkijonojen lukumäärä.');
+
+        for (let j = 0; j < lkm; j++) {
+          nimiTaulu[j] = prompt('Anna ' + (j+1) + '. merkkijono.');
+        };
+
+        let vastaus = liita(nimiTaulu);
+        alert('Taulukon alkioiden katenoitu merkkijono on: ' + vastaus);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 9 - Fibonacci nuolifunktiona</title>
+</head>
+<body>
+    <h1>Ohjelma tulostaa halutun fibonaccin lukujonon jäsenen.</h1>
+    <script>
+        'use strict';
+
+        const fibonacci = (mones) => {
+          if (mones === 1 || mones === 2)
+            return 1;
+          else
+            return fibonacci(mones-1) + fibonacci(mones-2);
+        }
+
+        const luku = +prompt('Monennenko luvun haluat fibonaccin lukujonossa?');
+        alert(luku + '. luku fibonaccin lukujonossa on: ' + fibonacci(luku));
+
+    </script>
+</body>
+</html>

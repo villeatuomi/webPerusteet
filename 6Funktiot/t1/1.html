@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tehtävä 1 - Gallonat litroiksi</title>
+</head>
+<body>
+    <h1>Ohjelma kysyy bensiinimäärän gallonoina ja muuntaa sen litroiksi.</h1>
+    <script>
+        'use strict';
+        const bensaMuunto = () => {
+          let input = +prompt('Anna bensiinin määrä gallonoina');
+          let gallonaMaara = input * 3.785;
+          alert('Bensiinin määrä litroiksi muutettuna on: ' + gallonaMaara);
+          return;
+        };
+
+        bensaMuunto();
+
+    </script>
+</body>
+</html>
