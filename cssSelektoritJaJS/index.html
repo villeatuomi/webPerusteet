@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css-selektorit ja javascript</title>
+</head>
+<body>
+    <ul class="fruits">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li data-foodtype="squishy">Orange</li>
+        <li>Pear</li>
+        <li>Kiwi</li>
+        <li id="berry">Strawberry</li>
+    </ul>
+    <script>
+        'use strict';
+        ////////////////////////////////
+        // tehtävä 1: getElementById() ja innerHTML
+
+        let t1 = document.getElementById("berry");
+
+        console.log(t1);
+        console.log('I found the berry: ' + t1.innerHTML);
+        t1.style.backgroundColor = "red";
+
+        /////////////////
+        /////////////////
+        // tehtävä 2: QuerySelector() ja CSS [attribute=value] Selector
+
+        let t2 = document.querySelector('li[data-foodtype=squishy]');
+        console.log(t2);
+        console.log('I found the fruit: ' + t2.innerHTML);
+        t2.style.backgroundColor = 'orange';
+
+        ////////////////
+        ////////////////
+        // tehtävä 3.1:
+
+        let t3 = document.getElementsByTagName('li');
+        console.log(t3);
+
+
+        // tehtävä 3.2:
+        console.log('Using the for loop here:');
+        let t3ul = document.getElementsByTagName('ul');
+        t3ul[0].style.listStyleType = 'none';
+        for (let i = 0; i < t3.length; i++) {
+        console.log(t3[i].innerHTML);
+        t3[i].style.width = '100px';
+
+        if (t3[i].innerHTML === 'Pear') {
+            t3[i].style.backgroundColor = 'green';
+        };
+
+        };
+
+        ////////////////
+        ////////////////
+        // tehtävä 4.1: QuerySelectorAll()
+
+        let t4 = document.querySelectorAll('li');
+        console.log(t4);
+        console.log('Using forEach here: ');
+
+        t4.forEach((useritem) => {
+          useritem.style.border = '1px solid black';
+          console.log(useritem.innerHTML);
+        });
+
+        ////////////////
+    </script>
+</body>
+</html>
